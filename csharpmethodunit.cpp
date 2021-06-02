@@ -12,9 +12,10 @@ CSharpMethodUnit::CSharpMethodUnit(const std::string &name, const std::string &r
  * 3) Выводим тип возвращаемого значения и имя функции
  * 4) Проходимся по всем элементам вектора m_body (тело функции) и генерируем их
  * 5) В конце ставим закрывающую скобку
+ *
+ * +7 и +3 - это соответственно, 4 и 8 пробелов для отступа в генерации метода
 */
-CSharpMethodUnit::CSharpMethodUnit()
-{
+std::string CSharpMethodUnit::compile(unsigned int level) const {
     std::string result = generateShift(level);
 
     if (m_flags & STATIC) {

@@ -18,13 +18,13 @@ SOURCES += main.cpp \
     cppfactory.cpp \
     javafactory.cpp \
     csharpfactory.cpp \
-    programgenerator.cpp
+    programgenerator.cpp  \
     javaclassunit.cpp \
     javamethodunit.cpp \
-    javaprintoperatorunit.cpp
+    javaprintoperatorunit.cpp \
     csharpclassunit.cpp \
     csharpmethodunit.cpp \
-    csharpprintoperatorunit.cpp
+    csharpprintoperatorunit.cpp \
 
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which as been marked deprecated (the exact warnings
@@ -52,10 +52,10 @@ HEADERS += \
     cppfactory.h \
     javafactory.h \
     csharpfactory.h \
-    programgenerator.h
+    programgenerator.h  \
     javaclassunit.h \
     javamethodunit.h \
-    javaprintoperatorunit.h
+    javaprintoperatorunit.h \
     csharpclassunit.h \
     csharpmethodunit.h \
-    csharpprintoperatorunit.h
+    csharpprintoperatorunit.h \

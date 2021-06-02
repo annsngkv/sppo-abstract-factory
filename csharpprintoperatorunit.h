@@ -7,7 +7,7 @@
  * Описание конкретного класса - объекта абстрактной фабрики группы С#,
  * представляющего Оператор печати
 */
-class CSharpPrintOperatorUnit
+class CSharpPrintOperatorUnit : public PrintOperatorUnit
 {
     //Текст, который передается в функцию вывода оператора печати
     std::string m_text;

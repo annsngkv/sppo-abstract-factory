@@ -5,7 +5,6 @@
  * генерируем отступ и выводим название функции вывода с встроенным в нее,
  * переданным текстом
  */
-CSharpPrintOperatorUnit::CSharpPrintOperatorUnit()
-{
+std::string CSharpPrintOperatorUnit::compile(unsigned int level) const {
     return generateShift(level) + "Console.WriteLine( \"" + m_text + "\" );\n";
 }

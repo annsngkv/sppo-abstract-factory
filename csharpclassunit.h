@@ -7,7 +7,7 @@
  * Описание конкретного класса - объекта абстрактной фабрики группы С#,
  * представляющего сущность Класс
 */
-class CSharpClassUnit
+class CSharpClassUnit : public ClassUnit
 {
     /*
      * Имя класса

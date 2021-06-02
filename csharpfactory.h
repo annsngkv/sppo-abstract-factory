@@ -1,12 +1,19 @@
 #ifndef CSHARPFACTORY_H
 #define CSHARPFACTORY_H
 
+#include "ifactory.h"
+#include "iostream"
+#include "memory"
+#include "csharpclassunit.h"
+#include "csharpmethodunit.h"
+#include "csharpprintoperatorunit.h"
+
 /*
  * Создание конкретнойй фабрики, предназначенной для
  * создания объектов всех типов внутри семейства,
  * относящегося к языку C#
 */
-class CSharpFactory
+class CSharpFactory : public IFactory
 {
     public:
         /* Определяем конкртетные реализации фабричных методов,

@@ -8,7 +8,7 @@
  * Описание конкретного класса - объекта абстрактной фабрики группы С++,
  * представляющего Функцию-член класса
 */
-class CSharpMethodUnit
+class CSharpMethodUnit : public MethodUnit
 {
     // Имя функции
     std::string m_name;
