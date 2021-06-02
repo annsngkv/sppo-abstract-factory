@@ -21,8 +21,8 @@ std::string JavaClassUnit::compile(unsigned int level) const {
         }
     }
 
-    //Ставим закрывающую скобку с точкой запятой в конце
-    result += generateShift(level) + "};\n";
+    //Ставим закрывающую скобку
+    result += generateShift(level) + "}\n";
 
     return result;
 }
