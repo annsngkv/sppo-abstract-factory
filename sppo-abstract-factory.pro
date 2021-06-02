@@ -17,7 +17,8 @@ SOURCES += main.cpp \
     cppprintoperatorunit.cpp \
     cppfactory.cpp \
     javafactory.cpp \
-    csharpfactory.cpp
+    csharpfactory.cpp \
+    programgenerator.cpp
     javaclassunit.cpp \
     javamethodunit.cpp \
     javaprintoperatorunit.cpp
@@ -50,7 +51,8 @@ HEADERS += \
     ifactory.h \
     cppfactory.h \
     javafactory.h \
-    csharpfactory.h
+    csharpfactory.h \
+    programgenerator.h
     javaclassunit.h \
     javamethodunit.h \
     javaprintoperatorunit.h
