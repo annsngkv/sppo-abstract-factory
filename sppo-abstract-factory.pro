@@ -15,6 +15,9 @@ SOURCES += main.cpp \
     cppclassunit.cpp \
     cppmethodunit.cpp \
     cppprintoperatorunit.cpp
+    javaclassunit.cpp \
+    javamethodunit.cpp \
+    javaprintoperatorunit.cpp
 
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which as been marked deprecated (the exact warnings
@@ -38,3 +41,6 @@ HEADERS += \
     cppclassunit.h \
     cppmethodunit.h \
     cppprintoperatorunit.h
+    javaclassunit.h \
+    javamethodunit.h \
+    javaprintoperatorunit.h
