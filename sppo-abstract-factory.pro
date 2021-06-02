@@ -12,6 +12,9 @@ TEMPLATE = app
 SOURCES += main.cpp \
     classunit.cpp \
     methodunit.cpp \
+    csharpclassunit.cpp \
+    csharpmethodunit.cpp \
+    csharpprintoperatorunit.cpp
 
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which as been marked deprecated (the exact warnings
@@ -32,3 +35,6 @@ HEADERS += \
     unit.h \
     classunit.h \
     methodunit.h \
+    csharpclassunit.h \
+    csharpmethodunit.h \
+    csharpprintoperatorunit.h
