@@ -26,9 +26,9 @@ class CSharpFactory : public IFactory
          *
          * arg const std::string &name
          *
-         * return ClassUnit *
+         * return std::shared_ptr<ClassUnit>
         */
-        ClassUnit * createClassUnit(const std::string &name);
+        std::shared_ptr<ClassUnit> createClassUnit(const std::string &name);
 
         /*
          * Создание объекта Функция-член
@@ -37,18 +37,18 @@ class CSharpFactory : public IFactory
          * arg const std::string &returnType
          * arg const std::string &returnType
          *
-         * return MethodUnit *
+         * return std::shared_ptr<MethodUnit>
         */
-        MethodUnit * createMethodUnit(const std::string &name, const std::string &returnType, unsigned int flags);
+        std::shared_ptr<MethodUnit> createMethodUnit(const std::string &name, const std::string &returnType, unsigned int flags);
 
         /*
          * Создание объекта Оператор печати
          *
          * arg const std::string &text
          *
-         * return PrintOperatorUnit *
+         * return std::shared_ptr<PrintOperatorUnit>
         */
-        PrintOperatorUnit * createPrintOperatorUnit(const std::string &text);
+        std::shared_ptr<PrintOperatorUnit> createPrintOperatorUnit(const std::string &text);
 };
 
 #endif // CSHARPFACTORY_H

@@ -1,6 +1,7 @@
 #ifndef PROGRAMGENERATOR_H
 #define PROGRAMGENERATOR_H
 #include "ifactory.h"
+#include "memory"
 
 /*
  * Класс, выполняющий генерацию программы относительно
@@ -9,9 +10,9 @@
 class ProgramGenerator
 {
     // язык, на котором будет генерироваться программа
-    IFactory *language;
+    std::shared_ptr<IFactory> language;
     public:
-        ProgramGenerator(IFactory *_language) { language = _language; }
+        ProgramGenerator(const std::shared_ptr<IFactory>& _language) { language = _language; }
         /*
          * Функция генерации программы относительно заданного языка программирования
          *
