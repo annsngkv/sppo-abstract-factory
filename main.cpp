@@ -4,6 +4,7 @@
 #include "csharpfactory.h"
 #include "programgenerator.h"
 #include "iostream"
+#include "memory"
 
 int main(int argc, char *argv[])
 {
@@ -18,9 +19,8 @@ int main(int argc, char *argv[])
      * Получаем генератор программы относительно выбранного языка,
      * и производим генерацию программы
     */
-    CppFactory *cpp_factory = new CppFactory();
-    ProgramGenerator *cpp = new ProgramGenerator(cpp_factory);
-    std::cout << cpp->generateProgram() << std::endl;
+    ProgramGenerator cpp(std::make_shared<CppFactory>());
+    std::cout << cpp.generateProgram() << std::endl;
 
     std::cout << "_____________________________________" << std::endl;
     std::cout << "JAVA PROGRAM GENERATING" << std::endl;
@@ -31,9 +31,8 @@ int main(int argc, char *argv[])
      * Получаем генератор программы относительно выбранного языка,
      * и производим генерацию программы
     */
-    JavaFactory *java_factory = new JavaFactory();
-    ProgramGenerator *java = new ProgramGenerator(java_factory);
-    std::cout << java->generateProgram() << std::endl;
+    ProgramGenerator java(std::make_shared<JavaFactory>());
+    std::cout << java.generateProgram() << std::endl;
 
     std::cout << "_____________________________________" << std::endl;
     std::cout << "C# PROGRAM GENERATING" << std::endl;
@@ -44,9 +43,8 @@ int main(int argc, char *argv[])
      * Получаем генератор программы относительно выбранного языка,
      * и производим генерацию программы
     */
-    CSharpFactory *csh_factory = new CSharpFactory();
-    ProgramGenerator *csh = new ProgramGenerator(csh_factory);
-    std::cout << csh->generateProgram() << std::endl;
+    ProgramGenerator csh(std::make_shared<CSharpFactory>());
+    std::cout << csh.generateProgram() << std::endl;
 
     return a.exec();
 }

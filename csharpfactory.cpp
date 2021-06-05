@@ -1,13 +1,13 @@
 #include "csharpfactory.h"
 
-ClassUnit * CSharpFactory::createClassUnit(const std::string &name) {
-    return new CSharpClassUnit(name);
+std::shared_ptr<ClassUnit> CSharpFactory::createClassUnit(const std::string &name) {
+    return std::make_shared<CSharpClassUnit> (name);
 }
 
-MethodUnit * CSharpFactory::createMethodUnit(const std::string &name, const std::string &returnType, unsigned int flags) {
-    return new CSharpMethodUnit (name, returnType, flags);
+std::shared_ptr<MethodUnit> CSharpFactory::createMethodUnit(const std::string &name, const std::string &returnType, unsigned int flags) {
+    return std::make_shared<CSharpMethodUnit> (name, returnType, flags);
 }
 
-PrintOperatorUnit * CSharpFactory::createPrintOperatorUnit(const std::string &text) {
-    return new CSharpPrintOperatorUnit (text);
+std::shared_ptr<PrintOperatorUnit> CSharpFactory::createPrintOperatorUnit(const std::string &text) {
+    return std::make_shared<CSharpPrintOperatorUnit> (text);
 }

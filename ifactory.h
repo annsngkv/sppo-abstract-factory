@@ -22,15 +22,15 @@ class IFactory
         /*
          * Создание объекта Класс
         */
-        virtual ClassUnit * createClassUnit(const std::string &name) = 0;
+        virtual std::shared_ptr<ClassUnit> createClassUnit(const std::string &name) = 0;
         /*
          * Создание объекта Функция-член
         */
-        virtual MethodUnit * createMethodUnit(const std::string &name, const std::string &returnType, unsigned int flags) = 0;
+        virtual std::shared_ptr<MethodUnit> createMethodUnit(const std::string &name, const std::string &returnType, unsigned int flags) = 0;
         /*
          * Создание объекта Оператор печати
         */
-        virtual PrintOperatorUnit * createPrintOperatorUnit(const std::string &text) = 0;
+        virtual std::shared_ptr<PrintOperatorUnit> createPrintOperatorUnit(const std::string &text) = 0;
         /*
          * Указываем компилятору самостоятельно сгенерировать деструктор по-умолчанию
          */
